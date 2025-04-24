@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chs Teddy Cavia - Chovatelská stanica morčat</title>
+
+
+    <style>
+        /* Resetovanie základných štýlov */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Štýl tela stránky */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Kontejner pre obsah */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigačný panel (karierka) */
+        nav {
+            background-color: #4a90e2;
+            padding: 10px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffb91b;
+        }
+
+        /* Hlavička */
+        header {
+            text-align: center;
+            background-color: #4a90e2;
+            color: white;
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        header h2 {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        header h4 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        /* Karty pre vrhy */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: #ffb91b;
+        }
+
+        .tab.active-tab {
+            background-color: #ffb91b;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #0000001a;
+        }
+
+        .active-content {
+            display: block;
+        }
+
+        /* Odkazy */
+        a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffb91b;
+        }
+
+        /* Obrázky v galérii */
+        .gallery img {
+            width: 150px; /* Nastavenie menšej šírky obrázkov */
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1); /* Efekt zväčšenia pri hover */
+        }
+
+        /* Responzívne štýly */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 2.8rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                margin-bottom: 10px;
+            }
+        }
+
+            
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #4a90e2;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigačný panel -->
+        <nav>
+            <ul>
+                <li><a href="#about" onclick="showSection('about')">O nás</a></li>
+                <li><a href="#breeds" onclick="showSection('breeds')">Vrhy</a></li>
+                <li><a href="#gallery" onclick="showSection('gallery')">Galéria</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hlavička stránky -->
+        <header id="home">
+            <h1>Chs Teddy Cavia</h1>
+            <h2><em>Chovatelská stanica morčat</em></h2>
+            <h4><em>Chovateľská stanica ušľachtilých morčiat plemena US Teddy v pigmentových aj nepigmentových farbách.</em></h4>
+        </header>
+
+        <!-- Sekcia "O nás" -->
+        <section class="section" id="about">
+            <h2>O nás</h2>
+            <p>Chs Teddy Cavia je chovateľská stanica, ktorá sa špecializuje na chov morčiat plemena US Teddy v rôznych farbách.</p>
+        </section>
+
+        <!-- Sekcia pre vrhy -->
+        <section class="section" id="breeds">
+            <h2>Naše vrhy</h2>
+
+            <!-- Karty pre vrhy -->
+            <div class="tabs">
+                <div class="tab" data-tab="1" onclick="showTabContent(1)">Vrh XY</div>
+                <div class="tab" data-tab="2" onclick="showTabContent(2)">Vrh T</div>
+                <div class="tab" data-tab="3" onclick="showTabContent(3)">Vrh S</div>
+                <div class="tab" data-tab="4" onclick="showTabContent(4)">Vrh N</div>
+            </div>
+
+            <!-- Obsah pre vrh XY -->
+            <div class="tab-content active-content" id="tab-1">
+                <h3>Vrh XY</h3>
+                <p>Opis vrhu XY...</p>
+                <div class="gallery">
+                    <img src="image.jpg" alt="Morča vrh XY 1">
+                    <img src="image.jpg" alt="Morča vrh XY 2">
+                </div>
+            </div>
+
+            <!-- Obsah pre vrh T -->
+            <div class="tab-content" id="tab-2">
+                <h3>Vrh T - Narodené 1. mája 2023</h3>
+                <p>Na prvého mája 2023 sa mi narodili krásne trojčatá vo farbe aguti čierna/biela a čokoladová/biela. Vrh T. Všetky morčiatka sú voľné a hľadajú si nový domov.</p>
+                <div class="gallery">
+                    <img src="morca1.jpg" alt="Morča vrh T 1">
+                    <img src="morca2.jpg" alt="Morča vrh T 2">
+                </div>
+            </div>
+
+            <!-- Obsah pre vrh S -->
+            <div class="tab-content" id="tab-3">
+                <h3>Vrh S - Narodené 30. apríla 2023</h3>
+                <p>Tieto tri krásne čierne guličky z vrhu S sú dvaja samčekovia a jedna samička. Samička je čierna s bielou náprsenkou, samčekovia majú krásne šikmé aguti čierne s bielou.</p>
+                <div class="gallery">
+                    <img src="morca3.jpg" alt="Morča vrh S 1">
+                    <img src="morca4.jpg" alt="Morča vrh S 2">
+                </div>
+            </div>
+
+            <!-- Obsah pre vrh N -->
+            <div class="tab-content" id="tab-4">
+                <h3>Vrh N</h3>
+                <p>Ďalší vrh, o ktorý sa staráme, má nádherné čierne a hnedé odtiene. Tieto morčiatka sa veľmi rýchlo prispôsobujú a sú už pripravené na nový domov.</p>
+                <div class="gallery">
+                    <img src="morca5.jpg" alt="Morča vrh N 1">
+                    <img src="morca6.jpg" alt="Morča vrh N 2">
+                </div>
+            </div>
+        </section>
+		
+           <!-- Sekcia "Na predaj" -->
+		<section class="section" id="for sale">
+			<h2> Na predaj </h2>
+				<p>......</p>
+				<img scr="morca.jpg" alt="Morča">
+        </section>
+				
+		
+		
+        <!-- Sekcia "Galéria" -->
+        <section class="section" id="gallery">
+            <h2>Galéria</h2>
+            <p>Naša galéria obsahuje fotky našich morčiat, vrhov a ďalších šťastných momentov.</p>
+            <div class="gallery">
+                <img src="morca1.jpg" alt="Morča">
+                <img src="morca2.jpg" alt="Morča">
+                <img src="morca3.jpg" alt="Morča">
+                <img src="morca4.jpg" alt="Morča">
+            </div>
+        </section>
+
+        <!-- Sekcia "Kontakt" -->
+        <section class="section" id="contact">
+            <p>Pre viac informácií alebo záujmu o morčatko  nás neváhajte kontaktovať: </p>
+			<p> Adersa:<b> Gajary bližšie info na:</p></b>  
+            <p>E-mail:<b style="color:black;"> kopca.martinko@gmail.com</p></b>
+			<p style="color:black;">Tel.číslo:<b>903 931 395</p></b>
+			<a style="color:black;" href="https://www.facebook.com/ChsTeddyCavia"> Facebook</a> 
+			</div>
+		
+        </section>
+		
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Chs Teddy Cavia </p>
+    </footer>
+
+    <script>
+        // Funkcia na zobrazenie sekcií
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+        }
+
+        // Funkcia na zobrazenie obsahu tabov
+        function showTabContent(tabIndex) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+            contents.forEach(content => content.classList.remove('active-content'));
+
+            document.querySelector(`[data-tab="${tabIndex}"]`).classList.add('active-tab');
+            document.getElementById(`tab-${tabIndex}`).classList.add('active-content');
+        }
+
+        // Spustenie po načítaní stránky
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+            showTabContent(1);  // Default zobraziť prvý tab (Vrh XY)
+        });
+    </script>
+
+</body>
+</html>
