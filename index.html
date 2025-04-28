@@ -15,15 +15,25 @@
         }
 
         /* Štýl tela stránky */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
+            display: flex;
+            flex-direction: column;
             font-family: 'Roboto', sans-serif;
             background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
         }
-	body > * :not(footer) {
-		flex: 1 >
-	}
+
+        .container {
+            flex: 1; /* This makes the main content take up available space */
+        }
+
         /* Kontejner pre obsah */
         .container {
             max-width: 1200px;
@@ -178,9 +188,6 @@
             }
         }
 
-            body > * :not(footer) {
-    flex: 1 >
-}
 
         footer {
             text-align: center;
@@ -201,7 +208,7 @@
         <nav>
             <ul>
                 <li><a href="#about" onclick="showSection('about')">O nás</a></li>
-                <li><a href="#breeds" onclick="showSection('breeds')">Vrhy</a></li>
+                <li><a href="#for sale" onclick="showSection('for sale')">Na predaj</a></li>
                 <li><a href="#gallery" onclick="showSection('gallery')">Galéria</a></li>
                 <li><a href="#contact" onclick="showSection('contact')">Kontakt</a></li>
             </ul>
@@ -220,67 +227,142 @@
             <p>Chs Teddy Cavia je chovateľská stanica, ktorá sa špecializuje na chov morčiat plemena US Teddy v rôznych farbách.</p>
         </section>
 
-        <!-- Sekcia pre vrhy -->
-        <section class="section" id="breeds">
-            <h2>Naše vrhy</h2>
+        <!-- Sekcia na predaj -->
+        <section class="section" id="for sale">
+            <h2>Na predaj</h2>
 
             <!-- Karty pre vrhy -->
             <div class="tabs">
-                <div class="tab" data-tab="1" onclick="showTabContent(1)">Vrh XY</div>
-                <div class="tab" data-tab="2" onclick="showTabContent(2)">Vrh T</div>
-                <div class="tab" data-tab="3" onclick="showTabContent(3)">Vrh S</div>
-                <div class="tab" data-tab="4" onclick="showTabContent(4)">Vrh N</div>
+                <div class="tab" data-tab="1" onclick="showTabContent(1)">Vrh W</div>
+                <div class="tab" data-tab="2" onclick="showTabContent(2)">Vrh x</div>
+                <div class="tab" data-tab="3" onclick="showTabContent(3)">Vrh Y</div>
+                <div class="tab" data-tab="4" onclick="showTabContent(4)">Vrh Z</div>
+                <div class="tab" data-tab="5" onclick="showTabContent(5)">Vrh A</div> 
+                <div class="tab" data-tab="6" onclick="showTabContent(6)">Vrh B</div>
+                <div class="tab" data-tab="7" onclick="showTabContent(7)">Vrh C</div>
+                <div class="tab" data-tab="8" onclick="showTabContent(8)">Vrh D</div>
+                <div class="tab" data-tab="9" onclick="showTabContent(9)">Vrh E</div>
+                <div class="tab" data-tab="10" onclick="showTabContent(10)">Vrh F</div>
             </div>
 
-            <!-- Obsah pre vrh XY -->
-            <div class="tab-content active-content" id="tab-1">
-                <h3>Vrh XY</h3>
-                <p>Opis vrhu XY...</p>
+            <!-- Obsah pre vrh W -->
+            <div class="tab-content active-tab" id="tab-1">
+                <h3>Vrh W</h3>
+                <p>Narodené 10.2.2024 </p><p>Otec:</p><p>Matka: Paggy Chs Teddy Cavia</p>
                 <div class="gallery">
-                    <img src="image.jpg" alt="Morča vrh XY 1">
-                    <img src="image.jpg" alt="Morča vrh XY 2">
+                    <img src="morca1,1.JPG" alt="Morča vrh W 1">
+                    <img src="morca1.JPG" alt="Morča vrh W 2">
                 </div>
             </div>
 
-            <!-- Obsah pre vrh T -->
+            <!-- Obsah pre vrh X -->
             <div class="tab-content" id="tab-2">
-                <h3>Vrh T - Narodené 1. mája 2023</h3>
-                <p>Na prvého mája 2023 sa mi narodili krásne trojčatá vo farbe aguti čierna/biela a čokoladová/biela. Vrh T. Všetky morčiatka sú voľné a hľadajú si nový domov.</p>
+                <h3>Vrh X </h3>
+                <p> Narodené: 24.2.2024</p><p>Otec: Jackob Chs Teddy Cavia</p><p>Matka: Charity Rezekvítek</p>
                 <div class="gallery">
-                    <img src="morca1.jpg" alt="Morča vrh T 1">
-                    <img src="morca2.jpg" alt="Morča vrh T 2">
+                    <img src="morca10.jpg" alt="Morča vrh X 1">
+                    <img src="morca10,1.jpg" alt="Morča vrh X 2">
                 </div>
             </div>
 
-            <!-- Obsah pre vrh S -->
+            <!-- Obsah pre vrh Y -->
             <div class="tab-content" id="tab-3">
-                <h3>Vrh S - Narodené 30. apríla 2023</h3>
-                <p>Tieto tri krásne čierne guličky z vrhu S sú dvaja samčekovia a jedna samička. Samička je čierna s bielou náprsenkou, samčekovia majú krásne šikmé aguti čierne s bielou.</p>
+                <h3>Vrh Y</h3>
+                <p> Narodené: 25.3.2024</p><p>Otec: Silvester</p><p>Matka: Amanda Chs Teddy Cavia</p>
                 <div class="gallery">
-                    <img src="morca3.jpg" alt="Morča vrh S 1">
-                    <img src="morca4.jpg" alt="Morča vrh S 2">
+                    <img src="morca13.jpg" alt="Morča vrh Y 1">
+                    <img src="morca13,1.jpg" alt="Morča vrh Y 1">
+                    <img src="morca15.jpg" alt="Morča vrh Y 2">
+                    <img src="morca15,1.jpg" alt="Morča vrh Y 2">
+                    <img src="morca16.jpg" alt="Morča vrh Y 3">
+                    <img src="morca16,1.jpg" alt="Morča vrh Y 3">                    
                 </div>
             </div>
 
-            <!-- Obsah pre vrh N -->
+            <!-- Obsah pre vrh Z -->
             <div class="tab-content" id="tab-4">
-                <h3>Vrh N</h3>
-                <p>Ďalší vrh, o ktorý sa staráme, má nádherné čierne a hnedé odtiene. Tieto morčiatka sa veľmi rýchlo prispôsobujú a sú už pripravené na nový domov.</p>
+                <h3>Vrh Z</h3>
+                <p> Narodené: 28.4.2024</p><p>Otec: </p><p>Matka: </p>
                 <div class="gallery">
-                    <img src="morca5.jpg" alt="Morča vrh N 1">
-                    <img src="morca6.jpg" alt="Morča vrh N 2">
+                    <img src="morca17.jpg" alt="Morča vrh Z 1">
+                    <img src="morca17,1.jpg" alt="Morča vrh Z 2">
                 </div>
             </div>
+
+            <!-- Obsah pre vrh A -->
+            <div class="tab-content" id="tab-5">
+                <h3>Vrh A</h3>
+                <p> Narodené: 8.8.2024</p><p>Otec: </p><p>Matka: </p>
+                <div class="gallery">
+                    <img src="morca2,1.JPG" alt="Morča vrh A 1">
+                    <img src="morca2.jpg" alt="Morča vrh Z A">
+                    <img src="morca3,1.JPG" alt="Morča vrh A 1">
+                    <img src="morca3.jpg" alt="Morča vrh Z A">
+                </div>
+            </div>
+
+            <!-- Obsah pre vrh B -->
+            <div class="tab-content " id="tab-6">
+                <h3>Vrh B</h3>
+                <p>Narodené: 10.12.2024</p><p>Otec:</p><p>Matka: Bag pipe Keira </p>
+                <div class="gallery">
+                    <img src="morca9,1.JPG" alt="Morča vrh B 1">
+                    <img src="morca9.JPG" alt="Morča vrh B 2">
+                </div>
+            </div>
+
+            <!-- Obsah pre vrh C -->
+            <div class="tab-content " id="tab-7">
+                <h3>Vrh C</h3>
+                <p>Narodené 11..2025</1p><p>Otec:</p><p>Matka: </p>
+                <div class="gallery">
+                    <img src="morca18,1.JPG" alt="Morča vrh C 1">
+                    <img src="morca18.JPG" alt="Morča vrh C 2">
+                    <img src="morca19,1.JPG" alt="Morča vrh C 1">
+                    <img src="morca19.JPG" alt="Morča vrh C 2">
+                    <img src="morca20,1.JPG" alt="Morča vrh C 1">
+                    <img src="morca20.JPG" alt="Morča vrh C 2">
+                </div>
+            </div>
+
+            <!-- Obsah pre vrh D -->
+            <div class="tab-content " id="tab-8">
+                <h3>Vrh D</h3>
+                <p>Narodené 1.2.2025 </p><p>Otec:</p><p>Matka: </p>
+                <div class="gallery">
+                    <img src="morca22,1.jpg" alt="Morča vrh D 1">
+                    <img src="morca22.JPG" alt="Morča vrh D 2">
+                </div>
+            </div>
+
+            <!-- Obsah pre vrh E -->
+            <div class="tab-content " id="tab-9">
+                <h3>Vrh E</h3>
+                <p>Narodené 10.2.2024 </p><p>Otec:</p><p>Matka: </p>
+                <div class="gallery">
+                    <img src="morca6,1.JPG" alt="Morča vrh E 1">
+                    <img src="morca6.JPG" alt="Morča vrh E 2">
+                    <img src="morca7,1.JPG" alt="Morča vrh E 1">
+                    <img src="morca7.JPG" alt="Morča vrh E 2">
+                    <img src="morca8,1.JPG" alt="Morča vrh E 1">
+                    <img src="morca8.JPG" alt="Morča vrh E 2">
+                </div>
+            </div>
+
+            <!-- Obsah pre vrh F -->
+            <div class="tab-content " id="tab-10">
+                <h3>Vrh F</h3>
+                <p>Narodené 10.2.2024 </p><p>Otec:</p><p>Matka: </p>
+                <div class="gallery">
+                    <img src="morca4,1.JPG" alt="Morča vrh F 1">
+                    <img src="morca4.JPG" alt="Morča vrh F 2">
+                    <img src="morca5,1.JPG" alt="Morča vrh F 1">
+                    <img src="morca5.JPG" alt="Morča vrh F 2">
+                </div>
+            </div>
+           
         </section>
-		
-           <!-- Sekcia "Na predaj" -->
-		<section class="section" id="for sale">
-			<h2> Na predaj </h2>
-				<p>......</p>
-				<img src="morca.jpg" alt="Morča">
-        </section>
-				
-		
+
 		
         <!-- Sekcia "Galéria" -->
         <section class="section" id="gallery">
@@ -297,7 +379,7 @@
         <!-- Sekcia "Kontakt" -->
         <section class="section" id="contact">
             <p>Pre viac informácií alebo záujmu o morčatko  nás neváhajte kontaktovať: </p>
-			<p> Adersa:<b> Gajary bližšie info na:</b></p>  
+			<p> Adersa:<b> Gajary</b> bližšie info na:</p>  
             <p>E-mail:<b style="color:black;"> kopca.martinko@gmail.com</b></p>
 			<p style="color:black;">Tel.číslo:<b>903 931 395</b></p>
 			<a style="color:black;" href="https://www.facebook.com/ChsTeddyCavia"> Facebook</a> 
@@ -336,9 +418,10 @@
         // Spustenie po načítaní stránky
         document.addEventListener('DOMContentLoaded', function() {
             showSection('home');
-            showTabContent(1);  // Default zobraziť prvý tab (Vrh XY)
+            showTabContent(1);  // Default zobraziť prvý tab (Vrh W)
         });
     </script>
 
 </body>
 </html>
+
